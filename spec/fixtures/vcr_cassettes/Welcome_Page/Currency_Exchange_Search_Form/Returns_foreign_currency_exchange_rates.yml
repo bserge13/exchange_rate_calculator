@@ -1,0 +1,55 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.api-ninjas.com/v1/exchangerate?X-Api-Key=wBYJMUcWGyoBJKsUT34CEg==Yd6H5zc6HAjbeSHC&pair=USD_JPY
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.9.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '56'
+      Connection:
+      - keep-alive
+      Date:
+      - Fri, 16 Feb 2024 20:53:52 GMT
+      X-Amzn-Requestid:
+      - fda23d57-bccd-4b01-af0b-efb54c49e803
+      Access-Control-Allow-Origin:
+      - "*"
+      Allow:
+      - GET, OPTIONS, POST
+      Access-Control-Allow-Headers:
+      - "*"
+      X-Amz-Apigw-Id:
+      - TPy3KFRCvHcEctw=
+      Access-Control-Allow-Methods:
+      - GET, OPTIONS, POST
+      X-Amzn-Trace-Id:
+      - Root=1-65cfcb60-24a4eb826de4b3835fbdc123;Parent=4a83a6589017cc3a;Sampled=0;lineage=5f59d3c8:0
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 ade0cadf195b634f1ce60fe31eb474a2.cloudfront.net (CloudFront)
+      X-Amz-Cf-Pop:
+      - CMH68-P1
+      X-Amz-Cf-Id:
+      - kbDTe6N0RWTjR303k9EEeTJMfde_HlrfMNgMDU2cYCsOLNyw1NUSSQ==
+    body:
+      encoding: UTF-8
+      string: '{"currency_pair": "USD_JPY", "exchange_rate": 150.24904}'
+  recorded_at: Fri, 16 Feb 2024 20:53:52 GMT
+recorded_with: VCR 6.2.0

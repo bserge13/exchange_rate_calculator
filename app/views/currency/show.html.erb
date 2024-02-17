@@ -1,0 +1,42 @@
+<%
+=begin%>
+ <h2> Your exchange rate from: <%=@current%> To <%=@desired%></h2>
+<p><h4><%=@exchange_rate.rate%> <%=@desired%> to every 1 <%=@current%> </h4></p>
+
+<p><%= form_with url: false do |f| %>
+  <%= f.label :current_cur, @current %>
+  <%= f.number_field :current_cur, :value => 1 %>
+
+  <%= f.label :desired_cur, @desired %>
+  <%= f.number_field :desired_cur, :value => number_to_currency(@exchange_rate.rate, delimiter: '', unit: ''), step: 0.25 %>
+<% end %></p> 
+<%
+=end%>
+
+
+
+<h2>Your exchange rate from: <%= @current %> To <%= @desired %></h2>
+<p><h4><%= @exchange_rate.rate %> <%= @desired %> to every 1 <%= @current %> </h4></p>
+
+<%= form_with url: false do |f| %>
+  <%= f.label :current_cur, @current %>
+  <%= f.number_field :current_cur, id: 'current_cur', value: 1 %>
+
+  <%= f.label :desired_cur, @desired %>
+  <%= f.number_field :desired_cur, id: 'desired_cur', value: number_to_currency(@exchange_rate.rate, delimiter: '', unit: ''), step: 0.25 %>
+<% end %>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var currentCurField = document.getElementById('current_cur');
+    var desiredCurField = document.getElementById('desired_cur');
+
+    currentCurField.addEventListener('input', function () {
+      var exchangeRate = <%= @exchange_rate.rate %>;
+      var currentCurValue = parseFloat(currentCurField.value);
+      var calculatedDesiredValue = exchangeRate * currentCurValue;
+      
+      desiredCurField.value = calculatedDesiredValue.toFixed(2); // Adjust the precision as needed
+    });
+  });
+</script>

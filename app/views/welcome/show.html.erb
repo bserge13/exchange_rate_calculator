@@ -1,0 +1,12 @@
+<h1> Currency Exchange </h1>
+
+
+<%= form_with url: "/currency", method: :get, data: {turbo: false}, local: true do |f| %>
+  <%= f.label :current_cur, "From" %>
+  <%= f.select :current_cur, currency_options %>
+
+  <%= f.label :desired_cur, "To" %>
+  <%= f.select :desired_cur, currency_options %>
+
+  <%= f.submit "Submit" %>
+<% end %>

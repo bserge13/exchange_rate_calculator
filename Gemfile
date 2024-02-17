@@ -53,6 +53,7 @@ group :development, :test do
   gem 'launchy'
   gem 'orderly'
   gem 'pry'
+  gem 'shoulda-matchers', '~> 5.0'
   gem 'vcr'
   gem 'webmock'
 end
