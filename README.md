@@ -1,24 +1,14 @@
-# README
+# Currency Exchange
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
+Welcome to the Currency Exchange Calculator App! This application is designed to make currency exchange calculations quick and hassle-free for users. Whether you're a traveler, a business professional, or simply someone curious about foreign exchange rates, this app is here to simplify your currency conversion needs.
 
-Things you may want to cover:
+## Features
+Real-time Exchange Rates: Access up-to-date exchange rates for a wide range of currencies, ensuring accuracy in your calculations.
 
-* Ruby version
+User-Friendly Interface: The app provides an intuitive and easy-to-use interface, allowing users to quickly input values and obtain precise conversion results.
 
-* System dependencies
+## Currencies
+Currencies currently available to calculate include: 
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- United States Dollar, Canadian Dollar, Euro, Japanese Yen, Chinese Yuan, British Pound, Swiss Franc, New Zealand Dollar, Australian Dollar, South Korean Won, Polish Zloty, Danish Krone, Turkish New Lira, Hong Kong Dollar
